@@ -11,7 +11,7 @@ radius = 11.0
 extents = Vector2( 7.90872, 7 )
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 5, 8 )
+extents = Vector2( 5, 7.91434 )
 
 [sub_resource type="SpriteFrames" id=2]
 animations = [ {
@@ -98,8 +98,7 @@ position = Vector2( -0.0305138, 2 )
 shape = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
-position = Vector2( 0.0929832, -8.00174 )
+position = Vector2( 0.0929832, -8.33326 )
 shape = SubResource( 1 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
