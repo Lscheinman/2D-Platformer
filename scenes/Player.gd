@@ -9,12 +9,12 @@ enum State { NORMAL, DASHING }
 
 export(int, LAYERS_2D_PHYSICS) var dashHazardMask
 
-var gravity = 1000
+var gravity = 1200
 var velocity = Vector2.ZERO
 var maxSpeed = 140
 var maxDashSpeed = 500
 var minDashSpeed = 200
-var jumpSpeed = 335
+var jumpSpeed = 310
 var horizontalAcceleration = 2000
 var jumpTerminationMultiplier = 3
 var hasDoubleJump = false
