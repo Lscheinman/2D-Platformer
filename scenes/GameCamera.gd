@@ -27,15 +27,14 @@ func _process(delta):
 		var ySample = shakeNoise.get_noise_2d(yNoiseSamplePosition.x, yNoiseSamplePosition.y)
 		var calculatedOffset = Vector2(xSample, ySample) * maxShakeOffset * pow(currentShakepercentage, 2)
 		offset = calculatedOffset
-	
+#
 func apply_shake(percentage):
 	currentShakepercentage = clamp(currentShakepercentage + percentage, 0, 1)
-		
+#
 func acquire_target_position():
 	var acquired = get_target_position_from_nodes_in_gruop("player")
 	if (!acquired):
 		get_target_position_from_nodes_in_gruop("PlayerDeath")
-
 
 func get_target_position_from_nodes_in_gruop(GroupName):
 	var nodes = get_tree().get_nodes_in_group(GroupName)

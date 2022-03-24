@@ -32,7 +32,12 @@ margin_bottom = 6.0
 modulate_color = Color( 0.478431, 0.478431, 0.478431, 1 )
 
 [sub_resource type="StyleBoxFlat" id=6]
-bg_color = Color( 0, 0, 0, 0.745098 )
+bg_color = Color( 0.203922, 0.333333, 0.317647, 0.772549 )
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+shadow_size = 1
 anti_aliasing = false
 
 [sub_resource type="DynamicFont" id=2]
@@ -46,13 +51,14 @@ Button/colors/font_color_disabled = Color( 1, 1, 1, 0.2 )
 Button/colors/font_color_focus = Color( 0.94, 0.94, 0.94, 1 )
 Button/colors/font_color_hover = Color( 1, 1, 1, 1 )
 Button/colors/font_color_pressed = Color( 0.329412, 0.207843, 0.207843, 1 )
-Button/constants/hseparation = 2
+Button/constants/hseparation = 7
 Button/fonts/font = null
 Button/styles/disabled = null
 Button/styles/focus = SubResource( 5 )
 Button/styles/hover = SubResource( 3 )
 Button/styles/normal = SubResource( 1 )
 Button/styles/pressed = SubResource( 4 )
+MarginContainer/colors/color = Color( 0, 0, 0, 1 )
 MarginContainer/constants/margin_bottom = 4
 MarginContainer/constants/margin_left = 4
 MarginContainer/constants/margin_right = 4
