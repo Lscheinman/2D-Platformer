@@ -50,6 +50,7 @@ default_bus_layout=""
 
 LevelManager="*res://scenes/LevelManager.tscn"
 Helpers="*res://scripts/helpers.gd"
+ScreenTransitionMananger="*res://scenes/ScreenTransitionMananger.tscn"
 
 [display]
 
