@@ -6,7 +6,8 @@ var currentLevelIndex = 0
 	
 func change_level(levelIndex):
 	currentLevelIndex = levelIndex
-	if (currentLevelIndex >= levelScenes.size()):
+#	if (currentLevelIndex >= levelScenes.size()):
+	if (currentLevelIndex == 1):
 		$"/root/ScreenTransitionMananger".transition_to_scene("res://scenes/UI/GameComplete.tscn")
 		
 	else:
