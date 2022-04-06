@@ -5,7 +5,7 @@ signal died
 var PlayerDeathScene = preload("res://scenes/PlayerDeath.tscn")
 var footstepParticles = preload("res://scenes/FootstepParticles.tscn")
 
-enum State { NORMAL, DASHING }
+enum State { NORMAL, DASHING, INPUT_DISABLED }
 
 export(int, LAYERS_2D_PHYSICS) var dashHazardMask
 
@@ -16,7 +16,7 @@ var maxDashSpeed = 500
 var minDashSpeed = 200
 var jumpSpeed = 310
 var horizontalAcceleration = 2000
-var jumpTerminationMultiplier = 5
+var jumpTerminationMultiplier = 3
 var hasDoubleJump = false
 var hasDash = false
 var currentState = State.NORMAL
@@ -37,14 +37,14 @@ func _process(delta):
 		State.DASHING:
 			process_dash(delta)
 			
+		State.INPUT_DISABLED:
+			process_input_disabled(delta)
 	isStateNew = false
 			
 func change_state(newState):
 	currentState = newState
 	isStateNew = true
-	
-		
-	
+
 func process_normal(delta):
 	if (isStateNew):
 		$DashParticles.emitting = false
@@ -65,7 +65,7 @@ func process_normal(delta):
 			$"/root/Helpers".apply_camera_shake(0.75)
 			hasDoubleJump = false
 		$CoyoteTimer.stop()
-		
+	
 	if velocity.y < 1 and !Input.get_action_strength("jump"):
 		velocity.y += gravity * jumpTerminationMultiplier * delta
 		
@@ -92,7 +92,6 @@ func process_normal(delta):
 	
 	update_animation()
 
-	
 func process_dash(delta):
 	if (isStateNew):
 		$DashParticles.emitting = true
@@ -116,13 +115,19 @@ func process_dash(delta):
 	if (abs(velocity.x) < minDashSpeed):
 		call_deferred("change_state", State.NORMAL)
 	
+func process_input_disabled(delta):
+	if (isStateNew):
+		$AnimatedSprite.play("idle")
+	velocity.x = lerp(0, velocity.x, pow(2, -50 * delta))
+	velocity.y += gravity * delta
+	velocity = move_and_slide(velocity, Vector2.UP)
+	
 func get_movement_vector():
 	var moveVector = Vector2.ZERO
 	moveVector.x = Input.get_action_strength("move_right") - Input.get_action_strength("move_left")
 	moveVector.y = -1 if Input.is_action_just_pressed("jump") else 0
 	return moveVector
 	
-
 func update_animation():
 	var moveVec = get_movement_vector()
 	
@@ -160,4 +165,6 @@ func create_footstep(scale = 1):
 func on_animated_sprite_frame_changed():
 	if ($AnimatedSprite.animation == "run" and $AnimatedSprite.frame == 0):
 		create_footstep(1)
-			
+	
+func disable_player_input():
+	change_state(State.INPUT_DISABLED)

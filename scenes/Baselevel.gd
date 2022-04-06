@@ -51,7 +51,7 @@ func on_player_died():
 	
 	
 func on_player_won():
-	currentPlayerNode.queue_free()
+	currentPlayerNode.disable_player_input()
 	var levelComplete = LevelCompleteScene.instance()
 	add_child(levelComplete)
 	

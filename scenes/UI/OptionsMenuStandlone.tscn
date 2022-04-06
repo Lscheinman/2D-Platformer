@@ -10,3 +10,4 @@ script = ExtResource( 3 )
 [node name="MenuBG" parent="." instance=ExtResource( 2 )]
 
 [node name="OptionsMenu" parent="." instance=ExtResource( 1 )]
+layer = 10
