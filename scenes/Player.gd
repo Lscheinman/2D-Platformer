@@ -9,14 +9,14 @@ enum State { NORMAL, DASHING }
 
 export(int, LAYERS_2D_PHYSICS) var dashHazardMask
 
-var gravity = 1200
+var gravity = 1100
 var velocity = Vector2.ZERO
 var maxSpeed = 140
 var maxDashSpeed = 500
 var minDashSpeed = 200
 var jumpSpeed = 310
 var horizontalAcceleration = 2000
-var jumpTerminationMultiplier = 3
+var jumpTerminationMultiplier = 5
 var hasDoubleJump = false
 var hasDash = false
 var currentState = State.NORMAL
@@ -66,7 +66,7 @@ func process_normal(delta):
 			hasDoubleJump = false
 		$CoyoteTimer.stop()
 		
-	if velocity.y < 0 and !Input.is_action_just_pressed("jump") and Input.is_action_pressed("down"):
+	if velocity.y < 1 and !Input.get_action_strength("jump"):
 		velocity.y += gravity * jumpTerminationMultiplier * delta
 		
 	else:

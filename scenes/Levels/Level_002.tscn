@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://scenes/Baselevel.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/Spikes.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/EnemySpawner.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/EnemyGoal.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scenes/Coin.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/TutorialSign.tscn" type="PackedScene" id=6]
 
 [node name="Level_002" instance=ExtResource( 1 )]
 
@@ -17,8 +18,12 @@ tile_data = PoolIntArray( -1310725, 2, 0, -1376254, 2, 0, -1245151, 0, 1, -11796
 [node name="FloregroundTileMap" parent="." index="4"]
 tile_data = PoolIntArray( -1179618, 2, 1, -1179617, 2, 2, -1179616, 2, 3, -1179614, 2, 196609, -1179613, 2, 196610, -1179612, 2, 196611, -1114082, 2, 131073, -1114081, 2, 131074, -1114080, 2, 131075, -1048550, 2, 1, -1048549, 2, 2, -1048548, 2, 3, -983014, 2, 65537, -983013, 2, 65538, -983012, 2, 65539, -917478, 2, 131073, -917477, 2, 131074, -917476, 2, 131075, -917468, 2, 1, -917467, 2, 2, -917466, 2, 2, -917465, 2, 3, -851932, 2, 131073, -851931, 2, 131074, -851930, 2, 131074, -851929, 2, 131075, -720866, 2, 1, -720865, 2, 3, -655330, 2, 131073, -655329, 2, 131075, -524292, 2, 1, -524291, 2, 3, -458756, 2, 65537, -458755, 2, 65539, -524261, 2, 196609, -524260, 2, 196611, -524257, 2, 1, -524256, 2, 3, -393220, 2, 131073, -393219, 2, 131075, -458721, 2, 131073, -458720, 2, 131075 )
 
-[node name="Flag" parent="." index="5"]
-position = Vector2( -216, -289 )
+[node name="TutorialSign" parent="." index="5" instance=ExtResource( 6 )]
+position = Vector2( 92.7099, -48.1317 )
+text = "Press X to dash while on-ground or in_air."
+
+[node name="Flag" parent="." index="6"]
+position = Vector2( -226, -289 )
 
 [node name="EnemyGoal" parent="Enemies" index="0" instance=ExtResource( 4 )]
 position = Vector2( 161.914, -288.142 )
