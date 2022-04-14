@@ -9,12 +9,12 @@ enum State { NORMAL, DASHING, INPUT_DISABLED }
 
 export(int, LAYERS_2D_PHYSICS) var dashHazardMask
 
-var gravity = 1100
+var gravity = 1000
 var velocity = Vector2.ZERO
 var maxSpeed = 140
 var maxDashSpeed = 500
 var minDashSpeed = 200
-var jumpSpeed = 310
+var jumpSpeed = 300
 var horizontalAcceleration = 2000
 var jumpTerminationMultiplier = 3
 var hasDoubleJump = false
@@ -46,6 +46,8 @@ func change_state(newState):
 	isStateNew = true
 
 func process_normal(delta):
+	if ($AnimatedSprite.animation == "run" and $AnimatedSprite.frame == 0):
+		create_footstep(0.5)
 	if (isStateNew):
 		$DashParticles.emitting = false
 		$DashArea/CollisionShape2D.disabled = true
@@ -62,11 +64,11 @@ func process_normal(delta):
 	if (moveVector.y < 0 and (is_on_floor() or ! $CoyoteTimer.is_stopped() or hasDoubleJump)):
 		velocity.y = moveVector.y * jumpSpeed
 		if (! is_on_floor() and $CoyoteTimer.is_stopped()):
-			$"/root/Helpers".apply_camera_shake(0.75)
+			$"/root/Helpers".apply_camera_shake(10000)
 			hasDoubleJump = false
 		$CoyoteTimer.stop()
 	
-	if velocity.y < 1 and !Input.get_action_strength("jump"):
+	if velocity.y < 0 and !Input.is_action_pressed("jump"):
 		velocity.y += gravity * jumpTerminationMultiplier * delta
 		
 	else:
@@ -161,10 +163,8 @@ func create_footstep(scale = 1):
 	get_parent().add_child(footstep)
 	footstep.scale = Vector2.ONE * scale
 	footstep.global_position = global_position
+	$FootstepAudioPlayer.play()
 	
-func on_animated_sprite_frame_changed():
-	if ($AnimatedSprite.animation == "run" and $AnimatedSprite.frame == 0):
-		create_footstep(1)
 	
 func disable_player_input():
 	change_state(State.INPUT_DISABLED)

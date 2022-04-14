@@ -30,7 +30,7 @@ func _process(delta):
 #
 func apply_shake(percentage):
 	currentShakepercentage = clamp(currentShakepercentage + percentage, 0, 1)
-#
+
 func acquire_target_position():
 	var acquired = get_target_position_from_nodes_in_gruop("player")
 	if (!acquired):

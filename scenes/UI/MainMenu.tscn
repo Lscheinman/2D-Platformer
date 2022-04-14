@@ -29,6 +29,7 @@ autoplay = "default"
 anims/default = SubResource( 1 )
 
 [node name="MenuBG" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1, 0 )
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 anchor_right = 1.0
@@ -39,10 +40,10 @@ __meta__ = {
 }
 
 [node name="PanelContainer" type="PanelContainer" parent="MarginContainer"]
-margin_left = 96.0
-margin_top = 40.0
-margin_right = 224.0
-margin_bottom = 140.0
+margin_left = 176.0
+margin_top = 85.0
+margin_right = 304.0
+margin_bottom = 185.0
 rect_pivot_offset = Vector2( 64, 50 )
 size_flags_horizontal = 4
 size_flags_vertical = 4
