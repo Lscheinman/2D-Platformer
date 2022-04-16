@@ -188,27 +188,32 @@ minPitchScale = 0.8
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="DeathSoundPlayer1"]
 stream = ExtResource( 17 )
-volume_db = -7.5
+volume_db = -2.5
+pitch_scale = 0.01
 bus = "PlayerDeath"
 
 [node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="DeathSoundPlayer1"]
 stream = ExtResource( 12 )
-volume_db = -7.5
+volume_db = -2.5
+pitch_scale = 0.01
 bus = "PlayerDeath"
 
 [node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="DeathSoundPlayer1"]
 stream = ExtResource( 10 )
-volume_db = -7.5
+volume_db = -2.5
+pitch_scale = 0.01
 bus = "PlayerDeath"
 
 [node name="AudioStreamPlayer4" type="AudioStreamPlayer" parent="DeathSoundPlayer1"]
 stream = ExtResource( 18 )
-volume_db = -7.5
+volume_db = -2.5
+pitch_scale = 0.01
 bus = "PlayerDeath"
 
 [node name="AudioStreamPlayer5" type="AudioStreamPlayer" parent="DeathSoundPlayer1"]
 stream = ExtResource( 16 )
-volume_db = -7.5
+volume_db = -2.5
+pitch_scale = 0.01
 bus = "PlayerDeath"
 
 [node name="DeathSoundPlayer2" parent="." instance=ExtResource( 19 )]
@@ -216,27 +221,32 @@ numberToPlay = 1
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="DeathSoundPlayer2"]
 stream = ExtResource( 9 )
-volume_db = -7.5
+volume_db = -2.5
+pitch_scale = 0.01
 bus = "PlayerDeath"
 
 [node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="DeathSoundPlayer2"]
 stream = ExtResource( 6 )
-volume_db = -7.5
+volume_db = -2.5
+pitch_scale = 0.01
 bus = "PlayerDeath"
 
 [node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="DeathSoundPlayer2"]
 stream = ExtResource( 15 )
-volume_db = -7.5
+volume_db = -2.5
+pitch_scale = 0.01
 bus = "PlayerDeath"
 
 [node name="AudioStreamPlayer4" type="AudioStreamPlayer" parent="DeathSoundPlayer2"]
 stream = ExtResource( 14 )
-volume_db = -7.5
+volume_db = -2.5
+pitch_scale = 0.01
 bus = "PlayerDeath"
 
 [node name="AudioStreamPlayer5" type="AudioStreamPlayer" parent="DeathSoundPlayer2"]
 stream = ExtResource( 8 )
-volume_db = -7.5
+volume_db = -2.5
+pitch_scale = 0.01
 bus = "PlayerDeath"
 
 [node name="DeathSoundPlayer3" parent="." instance=ExtResource( 19 )]
@@ -244,27 +254,32 @@ numberToPlay = 1
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="DeathSoundPlayer3"]
 stream = ExtResource( 11 )
-volume_db = -7.5
+volume_db = -2.5
+pitch_scale = 0.01
 bus = "PlayerDeath"
 
 [node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="DeathSoundPlayer3"]
 stream = ExtResource( 5 )
-volume_db = -7.5
+volume_db = -2.5
+pitch_scale = 0.01
 bus = "PlayerDeath"
 
 [node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="DeathSoundPlayer3"]
 stream = ExtResource( 4 )
-volume_db = -7.5
+volume_db = -2.5
+pitch_scale = 0.01
 bus = "PlayerDeath"
 
 [node name="AudioStreamPlayer4" type="AudioStreamPlayer" parent="DeathSoundPlayer3"]
 stream = ExtResource( 7 )
-volume_db = -7.5
+volume_db = -2.5
+pitch_scale = 0.01
 bus = "PlayerDeath"
 
 [node name="AudioStreamPlayer5" type="AudioStreamPlayer" parent="DeathSoundPlayer3"]
 stream = ExtResource( 13 )
-volume_db = -7.5
+volume_db = -2.5
+pitch_scale = 0.01
 bus = "PlayerDeath"
 
 [node name="DeathSoundPlayer4" parent="." instance=ExtResource( 19 )]
@@ -272,23 +287,33 @@ numberToPlay = 1
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="DeathSoundPlayer4"]
 stream = ExtResource( 24 )
-volume_db = -15.0
+volume_db = -2.5
+pitch_scale = 0.01
+bus = "PlayerDeath"
 
 [node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="DeathSoundPlayer4"]
 stream = ExtResource( 23 )
-volume_db = -15.0
+volume_db = -2.5
+pitch_scale = 0.01
+bus = "PlayerDeath"
 
 [node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="DeathSoundPlayer4"]
 stream = ExtResource( 20 )
-volume_db = -15.0
+volume_db = -2.5
+pitch_scale = 0.01
+bus = "PlayerDeath"
 
 [node name="AudioStreamPlayer4" type="AudioStreamPlayer" parent="DeathSoundPlayer4"]
 stream = ExtResource( 22 )
-volume_db = -15.0
+volume_db = -2.5
+pitch_scale = 0.01
+bus = "PlayerDeath"
 
 [node name="AudioStreamPlayer5" type="AudioStreamPlayer" parent="DeathSoundPlayer4"]
 stream = ExtResource( 21 )
-volume_db = -15.0
+volume_db = -2.5
+pitch_scale = 0.01
+bus = "PlayerDeath"
 
 [node name="Visuals" type="Node2D" parent="."]
 

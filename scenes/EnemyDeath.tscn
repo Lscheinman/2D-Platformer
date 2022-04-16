@@ -1,8 +1,7 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://assets/enemy/character_0016.png" type="Texture" id=1]
 [ext_resource path="res://assets/sounds/impactMining_001.ogg" type="AudioStream" id=2]
-[ext_resource path="res://scenes/Util/RandomAudioStreamPlayer.gd" type="Script" id=3]
 [ext_resource path="res://assets/sounds/impactMetal_heavy_002.ogg" type="AudioStream" id=4]
 [ext_resource path="res://assets/sounds/impactMetal_heavy_000.ogg" type="AudioStream" id=5]
 [ext_resource path="res://assets/sounds/impactMining_004.ogg" type="AudioStream" id=6]
@@ -72,8 +71,7 @@ script = ExtResource( 14 )
 autoplay = "death"
 anims/death = SubResource( 4 )
 
-[node name="DeathSoundPlayer1" type="Node" parent="." instance=ExtResource( 13 )]
-script = ExtResource( 3 )
+[node name="DeathSoundPlayer1" parent="." instance=ExtResource( 13 )]
 numberToPlay = 1
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="DeathSoundPlayer1"]
@@ -96,8 +94,7 @@ bus = "SFX"
 stream = ExtResource( 10 )
 bus = "SFX"
 
-[node name="DeathSoundPlayer2" type="Node" parent="." instance=ExtResource( 13 )]
-script = ExtResource( 3 )
+[node name="DeathSoundPlayer2" parent="." instance=ExtResource( 13 )]
 numberToPlay = 1
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="DeathSoundPlayer2"]
