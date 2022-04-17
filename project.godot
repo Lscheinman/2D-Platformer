@@ -52,6 +52,7 @@ LevelManager="*res://scenes/LevelManager.tscn"
 Helpers="*res://scripts/helpers.gd"
 ScreenTransitionMananger="*res://scenes/ScreenTransitionMananger.tscn"
 MouseCursor="*res://scenes/UI/MouseCursor.tscn"
+MusicPlayer="*res://scenes/MusicPlayer.tscn"
 
 [display]
 
