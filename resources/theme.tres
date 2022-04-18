@@ -1,8 +1,17 @@
-[gd_resource type="Theme" load_steps=10 format=2]
+[gd_resource type="Theme" load_steps=11 format=2]
 
 [ext_resource path="res://resources/BitPotion.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://assets/ui/tile_0029.png" type="Texture" id=2]
 [ext_resource path="res://assets/ui/tile_0009.png" type="Texture" id=3]
+
+[sub_resource type="StyleBoxTexture" id=7]
+texture = ExtResource( 2 )
+region_rect = Rect2( 0, 0, 18, 18 )
+margin_left = 5.0
+margin_right = 5.0
+margin_top = 7.0
+margin_bottom = 6.0
+modulate_color = Color( 0.290196, 0.290196, 0.290196, 1 )
 
 [sub_resource type="StyleBoxEmpty" id=5]
 
@@ -53,7 +62,7 @@ Button/colors/font_color_hover = Color( 1, 1, 1, 1 )
 Button/colors/font_color_pressed = Color( 0.329412, 0.207843, 0.207843, 1 )
 Button/constants/hseparation = 7
 Button/fonts/font = null
-Button/styles/disabled = null
+Button/styles/disabled = SubResource( 7 )
 Button/styles/focus = SubResource( 5 )
 Button/styles/hover = SubResource( 3 )
 Button/styles/normal = SubResource( 1 )

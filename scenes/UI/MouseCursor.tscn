@@ -37,6 +37,7 @@ void fragment() {
 shader = SubResource( 4 )
 
 [node name="MouseCursor" type="CanvasLayer"]
+pause_mode = 2
 layer = 128
 script = ExtResource( 2 )
 
