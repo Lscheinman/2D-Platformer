@@ -156,7 +156,7 @@ func kill():
 	playerDeathInstance.global_position = global_position
 	emit_signal("died")
 
-func on_hazard_area_entered(area2d):
+func on_hazard_area_entered(_area2d):
 	call_deferred("kill")
 	
 func create_footstep(scale = 1):
